@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
+const axios = require('axios');
+const countries = require("./countries.json");
 const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-const axios = require('axios');
-const countries = require("./countries.json");
+
 const url = 'https://api.covid19api.com/total/country/';
 const WAKE_COMMAND = '!cases';
 
