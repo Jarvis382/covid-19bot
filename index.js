@@ -26,7 +26,7 @@ client.on('message', async (msg) => {
       const slug = content[1]
       const payload = await axios.get(`${url}${slug}`);
       const covidData = payload.data.pop();
-      msg.reply(`Confirmed: ${covidData.Confirmed}, Deaths: ${covidData.Deaths}, Recovered: ${covidData.Recovered}, Active: ${covidData.Active} `)
+      msg.reply(`Confirmed: ${covidData.Confirmed}, Deaths: ${covidData.Deaths}, Recovered: ${covidData.Recovered}, Active: ${covidData.Active} `);
     }
   }
 });
